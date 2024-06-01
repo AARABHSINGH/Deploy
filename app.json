@@ -1,5 +1,5 @@
 {
-  "name": "Masoom",
+  "name": "NewTxtUpl",
   "description": "Let's Deploy Banned Repo",
   "keywords": [
     "telegram",
@@ -18,7 +18,7 @@
     },
     "REPO_URL": {
       "description": "URL of the REPO that you want to deploy.",
-      "value": "https://github.com/AARABHSINGH/masoom"
+      "value": "https://github.com/AARABHSINGH/Newtxtupl"
     },
     "PYTHON_FILE": {
       "description": "Name of the python file that you need to run. [use -m if you need to run __main__.py from a folder]",
