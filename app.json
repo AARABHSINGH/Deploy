@@ -1,0 +1,52 @@
+{
+  "name": "Masoom",
+  "description": "Let's Deploy Banned Repo",
+  "keywords": [
+    "telegram",
+    "open",
+    "source",
+    "multi",
+    "purpose",
+    "remote",
+    "deployer"
+  ],
+  "env": {
+    "OTHER_INSTALLS": {
+      "description": "If you need install packages for running your app(Python is pre-installed).[Space in between each package]",
+      "value": "apt -qq update && apt -qq install -y git wget pv jq python3-dev ffmpeg mediainfo, apt install ffmpeg",
+      "required": false
+    },
+    "REPO_URL": {
+      "description": "URL of the REPO that you want to deploy.",
+      "value": "https://github.com/AARABHSINGH/masoom"
+    },
+    "PYTHON_FILE": {
+      "description": "Name of the python file that you need to run. [use -m if you need to run __main__.py from a folder]",
+      "value": "-m"
+    },
+     "OTHER_CMD": {
+      "description": "If you need to run any bash command other than python specify here",
+      "value": "None",
+      "required": false
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks":[
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
